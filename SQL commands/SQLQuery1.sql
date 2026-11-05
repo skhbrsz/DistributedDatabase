@@ -1,1 +1,14 @@
-/
+USE DistributedDatabase;
+GO
+
+CREATE TABLE Furniture
+(
+    Id INT IDENTITY(1,1) PRIMARY KEY,
+    Name NVARCHAR(100) NOT NULL,
+    Category NVARCHAR(50) NOT NULL,
+    Material NVARCHAR(50) NOT NULL,
+    Color NVARCHAR(30) NOT NULL,
+    Price DECIMAL(10,2) NOT NULL,
+    UpdatedAt DATETIME2 NOT NULL DEFAULT SYSUTCDATETIME()
+);
+GO
